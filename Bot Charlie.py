@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-TOKEN = 'ODM1OTI5MzUyMjUxMjQ0NTc0.YIWl4A.MhMAVA5BXk_wGgzFIvB2aeF0Dnw'
+TOKEN = 'Тут должен находиться токен'
 
 
 hello_words = ['привет', 'здравствуй', 'Добрый день', 'Добрый вечер', 'Доброе утро']

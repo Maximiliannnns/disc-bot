@@ -3,7 +3,7 @@ from discord.ext import commands
 import json
 import requests
 
-TOKEN = 'ODM1OTI5NDQ4NDMxMzUzOTA4.YIWl9w.pS2r-LZq5LVGZnesHNUH5MEyt0k'
+TOKEN = 'Тут должен находиться токен'
 
 bot = commands.Bot(command_prefix='!')
 
