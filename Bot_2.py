@@ -3,7 +3,7 @@ from discord.ext import commands
 import json
 import requests
 
-TOKEN = '!'
+TOKEN = 'ODM1OTI5NDQ4NDMxMzUzOTA4.YIWl9w.VJkFocBGgIuIlAmC9Whd9qeOdGE'
 
 bot = commands.Bot(command_prefix='!')
 
@@ -58,5 +58,13 @@ async def music(ctx):
         url='https://music.yandex.ru/home',
     )
     await ctx.send(embed=embed)
+
+
+@bot.command()
+async def start_delta(ctx):
+    embed = discord.Embed(
+        title="Привет всем! Я Бот Дельта",
+    )
+    await ctx.channel.send(embed=embed)
 
 bot.run(TOKEN)

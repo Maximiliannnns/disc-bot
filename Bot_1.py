@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-TOKEN = '!'
+TOKEN = 'ODM1OTI5MzUyMjUxMjQ0NTc0.YIWl4A.jYrvHR51Yp1Bbjl5QILlTqutW_U'
 
 
 hello_words = ['привет', 'здравствуй', 'Добрый день', 'Добрый вечер', 'Доброе утро']
@@ -10,6 +10,8 @@ bye_words = ["пока", "прощай", "досвидания", "до свид�
 play_words = ["игр", "game"]
 prog_words = ["код", "прог"]
 pogoda_words = ["погода"]
+hi_bot_words = ["start_charlie"]
+helps_words = ["что вы умеете", "что ты уммешь", "что ты можешь", "что вы можете"]
 
 bot = commands.Bot(command_prefix='!')
 
@@ -81,5 +83,26 @@ async def on_message(message):
             url='https://www.gismeteo.ru/',
         )
         await message.channel.send(embed=embed)
+
+    find_hi_bot_words = False
+    for item in hi_bot_words:
+        if msg.find(item) >= 0:
+            find_hi_bot_words = True
+
+    if find_hi_bot_words:
+        embed = discord.Embed(
+            title="Привет всем! Я Бот Чарли",
+        )
+        await message.channel.send(embed=embed)
+
+    find_helps_words = False
+    for item in helps_words:
+        if msg.find(item) >= 0:
+            find_helps_words = True
+
+    if find_helps_words:
+        await message.channel.send("Я Бот Чарли, со мной моожно поболтать, что бы скоротать время, так же могу помочь"
+                                   " по некоторым ссылкам")
+        await message.channel.send("А подробнее про Бота Дельта указано в канале: #команды-бота.")
 
 bot.run(TOKEN)
