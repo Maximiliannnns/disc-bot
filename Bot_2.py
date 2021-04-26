@@ -3,7 +3,7 @@ from discord.ext import commands
 import json
 import requests
 
-TOKEN = 'ODM1OTI5NDQ4NDMxMzUzOTA4.YIWl9w.VJkFocBGgIuIlAmC9Whd9qeOdGE'
+TOKEN = '!'
 
 bot = commands.Bot(command_prefix='!')
 
